@@ -172,3 +172,35 @@ You can find other examples in the ``zipline/examples`` directory.
    :target: https://coveralls.io/r/quantopian/zipline
 
 .. _`Zipline Install Documentation` : http://www.zipline.io/install.html
+
+ZN-Quickstart
+====================
+
+
+.. code-block:: bash
+
+   
+   git clone https://github.com/rainx/cn_stock_holidays.git
+   cd cn_stock_holidays
+   sudo python setup.py install
+
+   #Use tingshua source
+   #sudo pip install -i https://pypi.tuna.tsinghua.edu.cn/simple matplotlib
+
+   sudo apt-get install python-matplotlib
+
+   mv dir/History.db ./History.db
+   zipline ingest -b my-db-bundle
+
+
+   #See bundles
+   zipline bundles
+
+   #Running Backtests with Data Bundles
+   zipline run --bundle my-db-bundle -f example/buy_and_hold.py --start 2016-1-1 --end 2018-1-1
+
+   #python -c "import matplotlib"
+
+
+
+See https://zhuanlan.zhihu.com/p/29850888
